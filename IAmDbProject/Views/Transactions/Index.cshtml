@@ -1,0 +1,51 @@
+﻿@model IEnumerable<IAmDbProject.Models.Transaction>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Credit_Card_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cvv2_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Receipt_Bool)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credit_Card_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cvv2_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Receipt_Bool)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Transaction_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Transaction_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Transaction_Id })
+        </td>
+    </tr>
+}
+
+</table>

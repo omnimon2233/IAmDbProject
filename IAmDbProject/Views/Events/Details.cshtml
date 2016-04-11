@@ -1,0 +1,82 @@
+﻿@model IAmDbProject.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event_Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event_Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event_Close)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event_Close)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Event_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

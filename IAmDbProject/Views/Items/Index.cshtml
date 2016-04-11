@@ -1,0 +1,87 @@
+﻿@model IEnumerable<IAmDbProject.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Donor.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expected_Sale_Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Start_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End_Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min_Increment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buyout_Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donor.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expected_Sale_Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Start_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.End_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min_Increment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buyout_Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Item_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Item_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Item_Id })
+        </td>
+    </tr>
+}
+
+</table>

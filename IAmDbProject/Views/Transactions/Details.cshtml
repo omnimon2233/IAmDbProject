@@ -1,0 +1,50 @@
+﻿@model IAmDbProject.Models.Transaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Credit_Card_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credit_Card_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cvv2_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cvv2_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receipt_Bool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receipt_Bool)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Transaction_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

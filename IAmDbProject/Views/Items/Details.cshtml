@@ -1,0 +1,98 @@
+﻿@model IAmDbProject.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Donor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Donor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Event.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Event.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expected_Sale_Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expected_Sale_Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Min_Increment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Min_Increment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyout_Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Buyout_Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Item_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
