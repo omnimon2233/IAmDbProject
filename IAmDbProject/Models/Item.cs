@@ -21,7 +21,7 @@ namespace IAmDbProject.Models
         public String Name { get; set; }
 
         [DisplayName("Expected Sale Value")]
-        [RegularExpression(@"^\d{1, 5}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
+        //[RegularExpression(@"^\d{1, 5}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
         public double Expected_Sale_Value { get; set; }
 
         [Required]
@@ -29,17 +29,14 @@ namespace IAmDbProject.Models
         public string Description { get; set; }
 
         [Required]
-        [RegularExpression(@"^\d{1, 3}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
         public double Start_Price { get; set; }
 
-        [RegularExpression(@"^\d{1, 3}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
-        public double End_Price { get; set; }
+        public double? End_Price { get; set; }
 
         [Required]
-        [RegularExpression(@"^\d{1, 3}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
         public double Min_Increment { get; set; }
 
-        [RegularExpression(@"^\d{1, 5}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
+       
         public double Buyout_Price { get; set; }
 
         [Required]

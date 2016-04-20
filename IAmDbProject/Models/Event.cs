@@ -15,6 +15,10 @@ namespace IAmDbProject.Models
         public int Event_Id { get; set; }
 
         [Required]
+        [StringLength(50, MinimumLength = 2)]
+        public string Event_name { get; set; }
+
+        [Required]
         [StringLength(50, MinimumLength =5)]
         public string Address { get; set; }
 
@@ -34,10 +38,9 @@ namespace IAmDbProject.Models
         public DateTime Date { get; set; }
 
         [Required]
-        //[Index("Idx_event_type")]
         public string Event_Type { get; set; }
 
-        [RegularExpression(@"^\d{1, 8}\.\d{2}$", ErrorMessage = "Must have a dollar value of at least 1.00 and must be formatted the same way.")]
+        
         public double Event_Total { get; set; }
 
         [RegularExpression(@"^[0-1]{1}$", ErrorMessage = "Must either be true or false.")]

@@ -8,6 +8,7 @@ namespace IAmDbProject.Controllers
 {
     public class HomeController : Controller
     {
+        //[Authorize(Roles ="volunteer")]
         public ActionResult Index()
         {
             return View();

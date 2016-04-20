@@ -7,13 +7,13 @@ namespace IAmDbProject.DataContexts.IAmDbProjectDbMigrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class Wed42016 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Wed42016));
         
         string IMigrationMetadata.Id
         {
-            get { return "201604060515037_InitialCreate"; }
+            get { return "201604201620544_Wed42016"; }
         }
         
         string IMigrationMetadata.Source

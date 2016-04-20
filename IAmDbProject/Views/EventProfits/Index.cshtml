@@ -1,0 +1,49 @@
+﻿@model IEnumerable<IAmDbProject.ViewModels.Event_Profit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Difference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Event_Expected)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Difference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Event_Expected)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+
+</table>

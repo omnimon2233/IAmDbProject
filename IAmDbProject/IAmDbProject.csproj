@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DonorsController.cs" />
+    <Compile Include="Controllers\EventProfitsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
@@ -177,9 +178,9 @@
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\TransactionsController.cs" />
     <Compile Include="DataContexts\IAmDbProjectDb.cs" />
-    <Compile Include="DataContexts\IAmDbProjectDbMigrations\201604060515037_InitialCreate.cs" />
-    <Compile Include="DataContexts\IAmDbProjectDbMigrations\201604060515037_InitialCreate.Designer.cs">
-      <DependentUpon>201604060515037_InitialCreate.cs</DependentUpon>
+    <Compile Include="DataContexts\IAmDbProjectDbMigrations\201604201620544_Wed42016.cs" />
+    <Compile Include="DataContexts\IAmDbProjectDbMigrations\201604201620544_Wed42016.Designer.cs">
+      <DependentUpon>201604201620544_Wed42016.cs</DependentUpon>
     </Compile>
     <Compile Include="DataContexts\IAmDbProjectDbMigrations\Configuration.cs" />
     <Compile Include="DataContexts\IdentityDb.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Event_Profit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -268,11 +270,9 @@
     <Content Include="Views\Events\Details.cshtml" />
     <Content Include="Views\Events\Edit.cshtml" />
     <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\Items\Create.cshtml" />
     <Content Include="Views\Items\Delete.cshtml" />
     <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Transactions\Create.cshtml" />
     <Content Include="Views\Transactions\Delete.cshtml" />
     <Content Include="Views\Transactions\Details.cshtml" />
@@ -288,6 +288,9 @@
     <Content Include="Views\Donors\Details.cshtml" />
     <Content Include="Views\Donors\Edit.cshtml" />
     <Content Include="Views\Donors\Index.cshtml" />
+    <Content Include="Views\EventProfits\Index.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,8 +304,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DataContexts\IAmDbProjectDbMigrations\201604060515037_InitialCreate.resx">
-      <DependentUpon>201604060515037_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="DataContexts\IAmDbProjectDbMigrations\201604201620544_Wed42016.resx">
+      <DependentUpon>201604201620544_Wed42016.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataContexts\IdentityMigrations\201604060424423_InitialCreate.resx">
       <DependentUpon>201604060424423_InitialCreate.cs</DependentUpon>
